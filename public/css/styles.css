@@ -1,0 +1,17 @@
+body{
+    background-color: beige;
+}
+h1{
+    color: orangered;
+}
+p{
+    color: black;
+}
+#main{
+    margin-top: 60px;
+    margin-bottom: 20px;
+}
+img{
+    width: 200px;
+    height: auto;
+}

@@ -1,0 +1,19 @@
+{
+  "name": "personalwebsite",
+  "version": "1.0.0",
+  "description": "Making personal website",
+  "license": "ISC",
+  "author": "Yashika Lanjewar",
+  "type": "commonjs",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^5.2.1",
+    "express-handlebars": "^8.0.4"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.11"
+  }
+}
