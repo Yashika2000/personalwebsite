@@ -20,8 +20,8 @@ app.get('/contact', (req, res)=>{
     res.render('contact');
 });
 
-app.get('/portfolio', (req, res)=>{
-    res.render('portfolio');
+app.get('/photoportfolio', (req, res)=>{
+    res.render('photoportfolio');
 });
 
 app.listen(port ,()=>{

@@ -15,3 +15,15 @@ img{
     width: 200px;
     height: auto;
 }
+#carouselExampleIndicators{
+  max-width: 900px;      /* controls size */
+  margin: 40px auto;     /* centers it */
+  padding: 10px;         /* breathing space */
+}
+.carousel-item img {
+  height: 450px;           /* adjust */
+  object-fit: cover;       /* keeps crop aesthetic */
+  border-radius: 8px;      /* optional: softer look */
+  /* background-color: #000; or any neutral */
+
+}
