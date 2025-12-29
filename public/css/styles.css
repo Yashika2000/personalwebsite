@@ -24,6 +24,35 @@ img{
   height: 450px;           /* adjust */
   object-fit: cover;       /* keeps crop aesthetic */
   border-radius: 8px;      /* optional: softer look */
-  /* background-color: #000; or any neutral */
-
 }
+.site-footer {
+  background-color: #2f3a42;      /* same dark tone */
+  color: #ffffff;
+  text-align: center;
+  padding: 16px 0;
+  margin-top: 40px;
+}
+
+/* First line */
+.footer-text {
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+/* Icon row */
+.footer-icons {
+  display: flex;
+  justify-content: center;
+  gap: 14px;                      /* controls closeness */
+}
+
+.footer-icons a {
+  color: #ffffff;
+  font-size: 22px;
+  transition: color 0.3s ease;
+}
+
+.footer-icons a:hover {
+  color: #f4c430;                 /* soft gold hover */
+}
+
