@@ -23,7 +23,9 @@ app.get('/contact', (req, res)=>{
 app.get('/photoportfolio', (req, res)=>{
     res.render('photoportfolio');
 });
-
+app.get('/poetry', (req, res)=>{
+    res.render('poetry');
+});
 app.listen(port ,()=>{
     console.log(`port is running on ${port}`);
 });
