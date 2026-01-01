@@ -27,6 +27,11 @@
   --space-md: 16px;
   --space-lg: 32px;
   --space-xl: 64px;
+
+  
+  --nav-footer-padding-y: 0.5rem;
+  --nav-footer-padding-x: 2rem;
+
 }
 
 
@@ -45,6 +50,8 @@ h1, h2, h3 {
 .navbar {
   background-color: var(--color-accent-secondary); /* Dark Maroon */
   color: var(--color-text-inverse);
+  padding: var(--nav-footer-padding-y) var(--nav-footer-padding-x) !important;
+  min-height: auto; /* prevent Bootstrap forcing height */
 }
 
 p{
@@ -72,7 +79,7 @@ img{
   background-color: var(--color-accent-secondary); /* Dark Maroon */
   color: var(--color-text-inverse);
   text-align: center;
-  padding: 16px 0;
+  padding: var(--nav-footer-padding-y) var(--nav-footer-padding-x);
   margin-top: 40px;
 }
 
@@ -93,6 +100,7 @@ img{
   color: var(--color-bg-primary);
   font-size: 22px;
   transition: color 0.3s ease;
+  line-height: 1.5;
 }
 
 
@@ -122,6 +130,7 @@ a:hover {
 .navbar .nav-link,
 .navbar .navbar-text {
   color: var(--color-text-inverse) !important; /* #F2E5C6 */
+  line-height: 1.5;
 }
 
 .navbar .nav-link:hover,
@@ -139,6 +148,9 @@ a:hover {
   margin-bottom: 24px;
   break-inside: avoid;
   border-radius: var(--radius-md);
+  box-shadow:
+    0 18px 45px rgba(59, 1, 11, 0.18),
+    0 2px 0 rgba(255, 255, 255, 0.55) inset;
 }
 @media (max-width: 1024px) {
   .masonry {
@@ -193,4 +205,152 @@ a:hover {
   letter-spacing: 0.01em;
 }
 
+/* Remove extra gap from the old page-header if it still exists */
+.page-header {
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
 
+/* Header inside the grid, spanning both columns */
+.poetry-shell-header {
+  grid-column: 1 / -1;
+  text-align: center;
+  margin-bottom: var(--space-xs);
+}
+
+.poetry-shell-header h1 {
+  margin: 0;
+  color: var(--color-accent-primary);
+}
+
+.poetry-shell-header .subtitle {
+  margin: var(--space-sm) auto 0;
+  max-width: 60ch;
+  color: var(--color-text-secondary);
+}
+
+.poetry-shell{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--space-xs) var(--space-lg);
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  gap: var(--space-xl);
+  align-items: start;
+}
+
+.poetry-toc{
+  position: static;
+  top: 110px; /* adjust based on navbar height */
+  padding: var(--space-lg);
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(117, 22, 45, 0.14);
+  background: rgba(255,255,255,0.18);
+  align-self: start;
+    box-shadow:
+    0 18px 45px rgba(59, 1, 11, 0.18),
+    0 2px 0 rgba(255, 255, 255, 0.55) inset;
+}
+
+.toc-heading{
+  margin: 0 0 var(--space-xs);
+  color: var(--color-accent-primary);
+  padding: var(--space-sm);
+  text-align: center;
+}
+
+.toc-subtitle{
+  margin: 0 0 var(--space-lg);
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  max-width: 32ch;
+}
+
+.toc-list{
+  display: grid;
+  gap: 10px;
+}
+
+.toc-item{
+  width: 100%;
+  text-align: left;
+  padding: 12px 14px;
+  border-radius: 14px;
+  border: 1px solid rgba(117, 22, 45, 0.12);
+  background: rgba(255,255,255,0.20);
+  cursor: pointer;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 10px;
+
+  transition: transform 160ms ease, background 160ms ease, border-color 160ms ease;
+}
+
+.toc-item:hover{
+  transform: translateY(-2px);
+  background: rgba(255,255,255,0.30);
+}
+
+.toc-item.is-active{
+  border-color: rgba(117, 22, 45, 0.25);
+  background: rgba(117, 22, 45, 0.08);
+}
+
+.toc-title{
+  color: var(--color-accent-secondary);
+  font-weight: 600;
+}
+
+
+.poetry-reader{
+  min-width: 0;
+}
+
+/* your existing 3D book page can stay; this is a good baseline */
+.book-page{
+  max-width: 760px;
+  margin: 0 auto;
+  padding: clamp(28px, 4vw, 56px);
+  background: #FFF8EA;
+  border: 1px solid rgba(117, 22, 45, 0.14);
+  border-radius: 18px;
+  box-shadow:
+    0 18px 45px rgba(59, 1, 11, 0.18),
+    0 2px 0 rgba(255, 255, 255, 0.55) inset;
+}
+
+.poem-title{
+  margin: 0;
+  text-align: center;
+  color: var(--color-accent-primary);
+  padding-bottom: var(--space-lg);
+}
+
+.poem-meta{
+  margin: var(--space-xs) 0 var(--space-lg);
+  text-align: center;
+  color: var(--color-text-secondary);
+  font-size: 0.95rem;
+}
+
+.poem-text{
+  margin: 0 auto;
+  max-width: 62ch;
+  white-space: pre-wrap;
+  line-height: 1.9;
+  font-size: 1.05rem;
+  color: var(--color-text-primary);
+  text-align: left; /* book-like */
+}
+
+/* Mobile */
+@media (max-width: 900px){
+  .poetry-shell{
+    grid-template-columns: 1fr;
+  }
+  .poetry-toc{
+    position: static;
+  }
+}
