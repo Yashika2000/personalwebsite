@@ -1,20 +1,45 @@
-<div class="container">
-    <h1>This is Contact Page</h1>
-<form>
-    <div class="mb-3">
-        <label for="name" class="name">Name</label>
-        <input type="text" class="form-control" id="name" placeholder="Enter Name">
-    </div>
-    <div class="mb-3">
-        <label for="email" class="form-label">Email address</label>
-        <input type="email" class="form-control" id="email" placeholder="Enter Email">
-        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-    </div>
-    <div class="mb-3">
-        <textarea for="message" class="form-control" placeholder="Type your message here.."></textarea>
-    </div>
-    
-  <button type="submit" class="btn btn-primary">SEND</button>
-</form>
-</div>
+<section class="contact-shell">
+  <div class="contact-window">
+    <div class="contact-grid">
+      <!-- LEFT: headline -->
+      <div class="contact-left">
+        <p class="contact-eyebrow">Let’s talk</p>
+        <h1 class="contact-title">LET’S<br/>GET IN<br/>TOUCH</h1>
+        <p class="contact-desc">
+          Whether you have a question, feedback, or just want to say hello —
+          I’d love to hear from you.
+        </p>
 
+      </div>
+
+      <!-- RIGHT: form -->
+      <div class="contact-right">
+        <form class="contact-form">
+          <div class="row2">
+            <label>
+              <span>First Name</span>
+              <input type="text" name="firstName" placeholder="Yashika" />
+            </label>
+
+            <label>
+              <span>Last Name</span>
+              <input type="text" name="lastName" placeholder="Lanjewar" />
+            </label>
+          </div>
+
+          <label>
+            <span>Email</span>
+            <input type="email" name="email" placeholder="name@email.com" />
+          </label>
+
+          <label>
+            <span>Message</span>
+            <textarea name="message" rows="5" placeholder="Write your message..."></textarea>
+          </label>
+
+          <button class="contact-btn" type="submit">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
