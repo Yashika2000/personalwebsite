@@ -26,6 +26,9 @@ app.get('/photoportfolio', (req, res)=>{
 app.get('/poetry', (req, res)=>{
     res.render('poetry');
 });
+app.get('/work', (req, res)=>{
+    res.render('work');
+});
 app.listen(port ,()=>{
     console.log(`port is running on ${port}`);
 });

@@ -195,5 +195,85 @@ so I keep longing forever.` }
   });
 });
 
+(() => {
+  const overlay = document.getElementById("projectOverlay");
+  const backdrop = overlay.querySelector(".overlay-backdrop");
+  const closeBtn = overlay.querySelector(".overlay-close");
 
+  const projectKicker = document.getElementById("projectKicker");
+  const projectHeading = document.getElementById("projectHeading");
+  const projectDesc = document.getElementById("projectDesc");
+  const projectChips = document.getElementById("projectChips");
+  const demoLink = document.getElementById("demoLink");
+  const codeLink = document.getElementById("codeLink");
 
+  const PROJECTS = {
+    p1: {
+      kicker: "Web App",
+      title: "Project One",
+      desc: "Write a crisp description here. What problem did it solve? What’s the outcome?",
+      tech: ["HTML", "CSS", "JavaScript"],
+      demo: "https://example.com",
+      code: "https://github.com/yourname/project-one",
+    },
+    p2: {
+      kicker: "Web App",
+      title: "Project Two",
+      desc: "Describe it like a story: goal → approach → result. Keep it short.",
+      tech: ["Node", "Express", "Handlebars"],
+      demo: "https://example.com",
+      code: "https://github.com/yourname/project-two",
+    },
+    p3: {
+      kicker: "Web App",
+      title: "Project Three",
+      desc: "What’s unique about this? Mention 1 standout feature.",
+      tech: ["React", "API", "Deployment"],
+      demo: "https://example.com",
+      code: "https://github.com/yourname/project-three",
+    },
+  };
+
+  function openOverlay(key) {
+    const data = PROJECTS[key];
+    if (!data) return;
+
+    projectKicker.textContent = data.kicker;
+    projectHeading.textContent = data.title;
+    projectDesc.textContent = data.desc;
+
+    projectChips.innerHTML = "";
+    data.tech.forEach((t) => {
+      const chip = document.createElement("span");
+      chip.className = "chip";
+      chip.textContent = t;
+      projectChips.appendChild(chip);
+    });
+
+    demoLink.href = data.demo;
+    codeLink.href = data.code;
+
+    overlay.classList.add("active");
+    overlay.setAttribute("aria-hidden", "false");
+    document.body.style.overflow = "hidden";
+  }
+
+  function closeOverlay() {
+    overlay.classList.remove("active");
+    overlay.setAttribute("aria-hidden", "true");
+    document.body.style.overflow = "";
+  }
+
+  document.querySelectorAll(".project-card").forEach((card) => {
+    card.addEventListener("click", () => openOverlay(card.dataset.project));
+  });
+
+  closeBtn.addEventListener("click", closeOverlay);
+  backdrop.addEventListener("click", closeOverlay);
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && overlay.classList.contains("active")) {
+      closeOverlay();
+    }
+  });
+})();
