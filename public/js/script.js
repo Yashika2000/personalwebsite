@@ -210,10 +210,10 @@ so I keep longing forever.` }
   const PROJECTS = {
     p1: {
       kicker: "Web App",
-      title: "Project One",
+      title: "Writer's Journal",
       desc: "Write a crisp description here. What problem did it solve? What’s the outcome?",
       tech: ["HTML", "CSS", "JavaScript"],
-      demo: "https://example.com",
+      demo: "https://writersjournal.onrender.com/",
       code: "https://github.com/yourname/project-one",
     },
     p2: {
