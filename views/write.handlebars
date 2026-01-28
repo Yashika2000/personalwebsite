@@ -1,0 +1,69 @@
+ <section id="write" class="panel is-visible" role="region" aria-label="Write">
+      <div class="write-grid">
+        <!-- LEFT: CALENDAR -->
+        <aside class="card calendar-card">
+          <div class="calendar-head">
+            <button class="icon-btn" id="prevMonth" aria-label="Previous month">‹</button>
+            <div class="month-title" id="monthTitle">Month YYYY</div>
+            <button class="icon-btn" id="nextMonth" aria-label="Next month">›</button>
+          </div>
+
+          <div class="dow">
+            <span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span>
+          </div>
+
+          <div class="calendar-grid" id="calendarGrid" aria-label="Calendar"></div>
+
+          <div class="selected-date">
+            <span class="label">Selected:</span>
+            <span id="selectedDateText">—</span>
+          </div>
+
+          <div class="small-note">
+            Entries autosave per date on this device (localStorage).
+          </div>
+        </aside>
+
+        <!-- RIGHT: PROMPT + TIMER + EDITOR -->
+        <section class="card editor-card">
+          <div class="prompt-bar">
+            <div class="prompt-text">
+              <div class="prompt-label">Prompt</div>
+              <div class="prompt-value" id="promptValue" aria-live="polite"></div>
+            </div>
+
+            <div class="prompt-controls">
+              <div class="timer">
+                <div class="timer-label">10:00 Timer</div>
+                <div class="timer-display" id="timerDisplay">10:00</div>
+              </div>
+
+              <div class="timer-buttons">
+                <button class="btn primary" id="timerStart">Start</button>
+                <button class="btn ghost" id="timerPause">Pause</button>
+                <button class="btn ghost" id="timerReset">Reset</button>
+              </div>
+
+              <button class="btn accent" id="changePrompt">Change prompt</button>
+            </div>
+          </div>
+
+          <div class="meta-row">
+            <div class="meta-pill" id="wordCount">0 words</div>
+            <button class="btn ghost small" id="clearEntry">Clear today’s entry</button>
+          </div>
+
+          <textarea
+            id="editor"
+            class="editor"
+            placeholder="Start writing here…"
+            spellcheck="true"
+          ></textarea>
+
+          <div class="save-row">
+            <div class="save-status" id="saveStatus">Not saved yet</div>
+            <button class="btn ghost" id="exportTxt">Export .txt</button>
+          </div>
+        </section>
+      </div>
+    </section>

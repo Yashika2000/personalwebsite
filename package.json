@@ -5,9 +5,9 @@
   "license": "ISC",
   "author": "Yashika Lanjewar",
   "type": "commonjs",
-  "main": "server.js",
+  "main": "server1.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server1.js"
   },
   "dependencies": {
     "express": "^5.2.1",

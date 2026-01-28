@@ -20,15 +20,10 @@ app.get('/contact', (req, res)=>{
     res.render('contact');
 });
 
-app.get('/photoportfolio', (req, res)=>{
-    res.render('photoportfolio');
+app.get('/write', (req, res)=>{
+    res.render('write');
 });
-app.get('/poetry', (req, res)=>{
-    res.render('poetry');
-});
-app.get('/work', (req, res)=>{
-    res.render('work');
-});
+
 app.listen(port ,()=>{
     console.log(`port is running on ${port}`);
 });
