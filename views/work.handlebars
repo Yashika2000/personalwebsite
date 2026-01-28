@@ -1,0 +1,93 @@
+<section class="work-page">
+  <header class="work-hero">
+    <h1 class="work-title">Portfolio</h1>
+    <p class="work-subtitle">A selection of things I’ve built with care.</p>
+  </header>
+
+  <!-- GRID -->
+  <div class="projects-grid">
+    <!-- Card 1 -->
+    <button
+      class="project-card"
+      type="button"
+      data-project="p1"
+      aria-haspopup="dialog"
+    >
+      <div class="card-fill" ></div>
+      <div class="card-meta">
+        <h3>Project One</h3>
+        <p>Web App</p>
+      </div>
+    </button>
+
+    <!-- Card 2 -->
+    <button
+      class="project-card"
+      type="button"
+      data-project="p2"
+      aria-haspopup="dialog"
+    >
+      <div class="card-fill"></div>
+      <div class="card-meta">
+        <h3>Project Two</h3>
+        <p>Web App</p>
+      </div>
+    </button>
+
+    <!-- Card 3 -->
+    <button
+      class="project-card"
+      type="button"
+      data-project="p3"
+      aria-haspopup="dialog"
+    >
+      <div class="card-fill"></div>
+      <div class="card-meta">
+        <h3>Project Three</h3>
+        <p>Web App</p>
+      </div>
+    </button>
+  </div>
+
+  <!-- FULLSCREEN OVERLAY -->
+  <div
+    class="project-overlay"
+    id="projectOverlay"
+    role="dialog"
+    aria-modal="true"
+    aria-hidden="true"
+  >
+    <div class="overlay-backdrop" data-close="true"></div>
+
+    <div class="overlay-panel" role="document">
+      <button class="overlay-close" type="button" aria-label="Close">
+        ×
+      </button>
+
+      <div class="overlay-inner">
+        <div class="overlay-left">
+          <p class="project-kicker" id="projectKicker">Web App</p>
+          <h2 class="project-heading" id="projectHeading">Project Title</h2>
+
+          <p class="project-desc" id="projectDesc">
+            A short description goes here.
+          </p>
+
+          <div class="chip-row" id="projectChips"></div>
+
+          <div class="project-links">
+            <a class="btn-link" id="demoLink" href="#" target="_blank" rel="noreferrer">Live Demo</a>
+            <a class="btn-link btn-link--ghost" id="codeLink" href="#" target="_blank" rel="noreferrer">Source Code</a>
+          </div>
+        </div>
+
+        <div class="overlay-right">
+          <div class="project-preview" id="projectPreview">
+            <p class="preview-note">Add screenshots later ✨</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
