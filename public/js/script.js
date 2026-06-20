@@ -217,12 +217,12 @@ so I keep longing forever.` }
       code: "https://github.com/yourname/project-one",
     },
     p2: {
-      kicker: "Web App",
-      title: "Project Two",
-      desc: "Describe it like a story: goal → approach → result. Keep it short.",
+      kicker: "ShigotoJP",
+      title: "AI-powered assistant for foreign engineers working in Japan.",
+      desc: "Translate daily reports, understand Slack messages, and learn Japanese while working.",
       tech: ["Node", "Express", "Handlebars"],
-      demo: "https://example.com",
-      code: "https://github.com/yourname/project-two",
+      demo: "https://shigotojp.onrender.com",
+      code: "https://github.com/Yashika2000/shigotoJP",
     },
     p3: {
       kicker: "Web App",
